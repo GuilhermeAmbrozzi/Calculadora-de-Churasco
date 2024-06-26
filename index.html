@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/src/css/style.css" />
+    <link rel="stylesheet" href="/src/css/reset.css" />
+    <link rel="stylesheet" href="./src/css/responsivo.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <title>Mapa Calculadora de Churrasco</title>
+  </head>
+  <body>
+    <header>
+      <h1>Mapa</h1>
+      <div class="img">
+        <img src="/src/img/foto.png" alt="imagem calculadora de churrasco.">
+      </div>
+    </header>
+
+    <main>
+      <form>
+        <div class="input-group">
+          <label for="mulheres">Mulheres:</label>
+          <div class="input-wrapper">
+            <button type="button" onclick="decremento('mulheres')">-</button>
+            <input type="number" min="0" max="99" value="0" step="1" class="mulher" id="mulheres" readonly />
+            <button type="button" onclick="incremento('mulheres')">+</button>
+          </div>
+        </div>
+        <div class="input-group">
+          <label for="homens">Homens:</label>
+          <div class="input-wrapper">
+            <button type="button" onclick="decremento('homens')">-</button>
+            <input type="number" min="0" max="99" value="0" step="1" class="homem" id="homens" readonly />
+            <button type="button" onclick="incremento('homens')">+</button>
+          </div>
+        </div>
+        <div class="input-group">
+          <label for="criancas">Crianças:</label>
+          <div class="input-wrapper">
+            <button type="button" onclick="decremento('criancas')">-</button>
+            <input type="number" min="0" max="99" value="0" step="1"  class="crianca" id="criancas" readonly />
+            <button type="button" onclick="incremento('criancas')">+</button>
+          </div>
+        </div>
+        <div class="input-group">
+          <button type="button" class="calcular" onclick="calcularChurrasco()">Calcular</button>
+        </div>
+      </form>
+    </main>
+
+    <p>Quantidade de itens a serem comprados:</p>
+
+    <ul class="compra">
+      <li id="bovina"></li>
+      <li id="frango"></li>
+      <li id="linguica"></li>
+      <li id="refrigerante"></li>
+      <li id="cerveja"></li>
+    </ul>
+
+   <script src="/src/js/Script.js"></script>
+  </body>
+</html>
